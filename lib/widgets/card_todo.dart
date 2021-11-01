@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// create custom card
 class CardTodo extends StatefulWidget {
   const CardTodo({Key? key, this.textTodo, this.iconTodo}) : super(key: key);
 

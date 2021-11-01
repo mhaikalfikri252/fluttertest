@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-  // to show alert dialog
+  // show alert dialog
   Future<void> _showMyDialog() async {
     return showDialog<void>(
       context: context,
@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-  // to build list item with listview builder
+  // build list item with listview builder
   Widget _todoListItem() {
     return ListView.builder(
       itemCount: _todoList.length,

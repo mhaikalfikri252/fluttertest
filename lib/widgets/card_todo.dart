@@ -1,39 +1,41 @@
 import 'package:flutter/material.dart';
 
-class CardTodo extends StatelessWidget {
-  const CardTodo({Key? key, this.textTodo}) : super(key: key);
+class CardTodo extends StatefulWidget {
+  const CardTodo({Key? key, this.textTodo, this.iconTodo}) : super(key: key);
 
   final String? textTodo;
-  // final String? dateTodo;
+  final IconButton? iconTodo;
 
+  @override
+  State<CardTodo> createState() => _CardTodoState();
+}
+
+class _CardTodoState extends State<CardTodo> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 365,
       height: 80,
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
           side: BorderSide(color: Colors.blue),
         ),
-        child: Column(
+        child: Row(
           children: [
-            SizedBox(
-              height: 13,
-            ),
             Container(
-              margin: EdgeInsets.only(right: 280),
+              margin: EdgeInsets.only(left: 20),
               child: Text(
-                textTodo ?? "",
+                widget.textTodo ?? "",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
             ),
-            // SizedBox(
-            //   height: 10,
-            // ),
-            // Container(
-            //   margin: EdgeInsets.only(right: 285),
-            //   child: Text(dateTodo ?? ""),
-            // ),
+            Container(
+              margin: EdgeInsets.only(left: 235),
+              child: widget.iconTodo,
+            )
           ],
         ),
       ),

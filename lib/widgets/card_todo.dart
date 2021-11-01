@@ -24,7 +24,7 @@ class _CardTodoState extends State<CardTodo> {
         child: Row(
           children: [
             Container(
-              margin: EdgeInsets.only(left: 20),
+              margin: EdgeInsets.only(left: 15),
               child: Text(
                 widget.textTodo ?? "",
                 style: TextStyle(
@@ -33,8 +33,8 @@ class _CardTodoState extends State<CardTodo> {
                 ),
               ),
             ),
+            Spacer(),
             Container(
-              margin: EdgeInsets.only(left: 235),
               child: widget.iconTodo,
             )
           ],
